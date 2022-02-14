@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap');
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    /* to remove horizontal scroll bar */
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.active {
+    color: rgb(247, 80, 80);
+    text-decoration: underline;
+    font-weight: bold;
+}
+h4 {
+    font-size: 3vmin;
+    color: rgb(161, 108, 234);
+    margin: 20px auto;
+}
+p {
+ color: #7c7c7c;
+ padding: 0 40px;
+}
+/* Navbar */
+.navbar {
+    /* position: relative;
+    relative: Positions the element relative to its normal positon and will leave a gap at its normal position.
+    
+    position: absolute;
+    absolute: Positions the element relative to the positon of its first parent*/
+    position: absolute; 
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links li {
+    margin: 0 30px;
+}
+
+/* header section */
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/header-bg.png');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.header-content {
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.header-content h2{
+    font-size: 4vmin; /*v min is to make our text responsive*/
+    font-family: 'Merriweather', serif;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: rgb(247, 80, 80);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ctn{
+    padding: 8px 15px;
+    background: rgb(247, 80, 80);
+    border-radius: 20px;
+    color: whitesmoke;
+    font-family: 'Merriweather', serif;
+}
+
+/* Events Section */
+section {
+    width: 80%;
+    margin: 80px auto;
+
+}
+.title {
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(161, 108, 234);
+}
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  
+}
+.row .col  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.events .row {
+    margin-top: 50px;
+}
+.row .col img {
+    width:80%;
+}
+.events .ctn {
+    margin-top: 30px;
+}
+
+/* Explore Section */
+.explore {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./images/bg2.png');
+    background-position: center; /*to center the background image*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.explore-content {
+    width: 60%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.explore-content h1 {
+    font-size: 7vmin;
+}
+.explore-content .line {
+    margin-bottom: 50px;
+}
+.explore-content p {
+    color: rgb(221, 221, 221);
+}
+.explore-content .ctn {
+    margin-top: 40px;
+}
+
+
+
+/* footer  */
+.footer {
+    width:100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background: #484872;
+    text-align: center;
+}
+.footer p {
+    color: whitesmoke;
+    margin: 20px auto;
+}
+
+
+/* Mobile Device (Responsive) */
+.menu-btn {
+    /* This block is for creating the navbar menu btn */
+    position: absolute;
+    top: 30px;
+    right:30px;
+    width: 25px;    
+    cursor: pointer;
+    display: none; /*this is done so that at normal width the menu btn doesnt show*/
+}
+@media only screen and (max-width:850px){
+    /* Navabar Section */
+    .menu-btn {
+        /* when viewed in mobile phones it will show the menu btn */
+        display: block;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: rgb(249, 186, 186);
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu {
+        margin-top: 0px;
+         border-bottom-right-radius: 30%; /*to make the navbar curved from bottom right */
+    }
+    .nav-links li {
+        margin: 30px auto;
+
+    }
+
+    /* Events Section */
+    .row {
+        flex-direction: column;
+    }
+    .row .col {
+        margin: 20px auto;
+    }
+    .col img {
+        width: 90%;
+    }
+
+    /* Explore */
+    .explore-content {
+        width: 100%;
+
+    }
+}
